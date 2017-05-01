@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'mixins';
+
+#headerContainer {
+	width: $pageMobileWidth;
+	margin: 0 auto;
+	background-color: darken(#EB9409, 13%);
+	height: 1000px;
+	background-image: url('../img/lamptablet.jpg');;
+	@include mediaTablet {
+		width: $pageTabletWidth;
+	}
+}
+
+#homeContainer {
+	position: relative;
+	top: 80px;
+	height: 300px;
+	@include mediaTablet {
+		height: 490px;
+	}
+	background-color: rgba(190,190,190,0.5);
+	width: inherit;
+
+}
+
+.headerImage {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: inherit;
+}
+
+.homeButton {
+	width: 150px;
+	height: 80px;
+	@include mediaTablet {
+		width: 200px;
+		height: 100px;
+	};
+	background-color:burlywood;;
+	transition-duration: 0.5s;
+	font-family: $headerFont;
+	font-size: 1.2em;
+	box-shadow: -3px 3px 1px black;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-top: 7px
+
+}
+
+.homeButton:hover {
+	background-color: lighten(#EB9409, 30%)
+}
+
+#waiterPopup {
+	display: none;
+}

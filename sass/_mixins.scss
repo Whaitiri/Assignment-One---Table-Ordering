@@ -1,0 +1,38 @@
+@mixin mediaMobile {
+	@media (max-width: #{$pageMobileWidth}) {
+		@content;
+	}
+}
+
+@mixin mediaTablet {
+	@media (min-width: #{$pageTabletWidth}) and (max-width: #{$pageFullWidth}) {
+		@content;
+	}
+}
+
+@mixin mediaDesktop {
+	@media (min-width: #{$pageFullWidth}) {
+		@content;
+	}
+}
+
+@mixin greenBorder {
+	border: green 1px solid;
+}
+
+@mixin blueBorder {
+	border: blue 1px solid;
+}
+
+@mixin yellowBorder {
+	border: yellow 1px solid;
+}
+
+@mixin redBorder {
+	border: red 1px solid;
+}
+
+
+
+
+

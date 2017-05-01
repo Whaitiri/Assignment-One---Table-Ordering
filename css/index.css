@@ -1,0 +1,47 @@
+#headerContainer {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #ab6c07;
+  height: 1000px;
+  background-image: url("../img/lamptablet.jpg"); }
+  @media (min-width: 768px) and (max-width: 2024px) {
+    #headerContainer {
+      width: 768px; } }
+
+#homeContainer {
+  position: relative;
+  top: 80px;
+  height: 300px;
+  background-color: rgba(190, 190, 190, 0.5);
+  width: inherit; }
+  @media (min-width: 768px) and (max-width: 2024px) {
+    #homeContainer {
+      height: 490px; } }
+
+.headerImage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: inherit; }
+
+.homeButton {
+  width: 150px;
+  height: 80px;
+  background-color: burlywood;
+  transition-duration: 0.5s;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  box-shadow: -3px 3px 1px black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 7px; }
+  @media (min-width: 768px) and (max-width: 2024px) {
+    .homeButton {
+      width: 200px;
+      height: 100px; } }
+
+.homeButton:hover {
+  background-color: #fbd392; }
+
+#waiterPopup {
+  display: none; }
