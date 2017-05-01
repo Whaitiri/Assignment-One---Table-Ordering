@@ -1,6 +1,9 @@
 @import 'variables';
 @import 'mixins';
 
+body {
+	overflow: hidden;
+}
 
 * {
 	margin: 0;
