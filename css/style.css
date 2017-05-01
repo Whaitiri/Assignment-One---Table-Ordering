@@ -1,3 +1,7 @@
+.centerMe {
+  margin: 0 auto;
+  text-align: center; }
+
 body {
   overflow: hidden; }
 
@@ -11,9 +15,15 @@ button {
   border: 0;
   font-size: 1em;
   cursor: pointer;
-  border-radius: 8px;
   transition-duration: 0.5s;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  outline: none; }
+
+button:active {
+  transform: translateY(4px); }
+
+a {
+  color: black; }
 
 h1 {
   font-family: "Lato", sans-serif; }
@@ -21,10 +31,82 @@ h1 {
 p {
   font-family: "Open Sans", sans-serif; }
 
-.centerMe {
+#homeContainer {
+  width: 400px;
   margin: 0 auto;
-  text-align: center; }
+  background-color: #ab6c07;
+  height: 1000px;
+  background-image: url("../img/lamptablet.jpg"); }
+
+#homeBannerContainer {
+  position: relative;
+  top: 80px;
+  height: 300px;
+  background-color: rgba(190, 190, 190, 0.5);
+  width: inherit; }
+
+.homeImage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%; }
+
+.homeButton {
+  width: 150px;
+  height: 80px;
+  transition-duration: 0.5s;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  box-shadow: -3px 3px 1px black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+  border-radius: 8px;
+  background-color: burlywood; }
+
+.homeButton:hover {
+  background-color: #fbd392; }
+
+#waiterPopup {
+  display: none; }
 
 #masterContainer {
   width: 100%;
   height: 100%; }
+
+#headerContainer {
+  width: 400px;
+  background-color: #ba7507;
+  background: linear-gradient(to right, #d37154, #e19a55);
+  height: 211px; }
+
+#pageContainer {
+  width: 400px;
+  height: 500px;
+  background-color: #f7aa30;
+  background: linear-gradient(to right, #d37154, #e19a55); }
+
+.headerImage {
+  margin-top: 20px;
+  width: 100%; }
+
+#headerNav {
+  width: 100%; }
+
+#headerNav ul li {
+  display: inline; }
+
+#headerNav button {
+  height: 50px;
+  border-radius: 18px;
+  text-align: center;
+  letter-spacing: 2px; }
+
+.inactiveButton {
+  background-color: rgba(222, 184, 135, 0.2);
+  width: 35%;
+  border: 2px burlywood solid; }
+
+.activeButton {
+  background-color: burlywood;
+  width: 41%; }

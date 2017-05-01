@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=400, 768, 1024, initial-scale=1">
 
 	<title>Preservatorium - Menu</title>
-
+	<script src="https://use.fontawesome.com/8e7d0d1d5e.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -12,15 +12,21 @@
 <body>
 
 <div id="masterContainer">
-	<div id="headerContainer">
-		<img class="headerImage" src="img/logo.png">
+	<div id="headerContainer" class="centerMe">
+		<a href="index.html"><img class="headerImage" src="img/logo.png"></a>
+		<nav id="headerNav">
+			<ul class="centerMe">
+				<li><a href="menu.html"><button class="activeButton"><i class="fa fa-cutlery" aria-hidden="true"></i><br>Menu</button></a></li>
+				<li><a href="cart.html"><button class="inactiveButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Cart</button></a></li>
+			</ul>
+		</nav>
 	</div>
 
-	<div id="pageContainer">
+	<div id="pageContainer" class="centerMe">
 		
 	</div>
 
-	<div id="footerContainer">
+	<div id="footerContainer" class="centerMe">
 		
 	</div>
 </div>

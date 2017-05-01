@@ -1,43 +1,39 @@
-@import 'variables';
-@import 'mixins';
-
-#headerContainer {
+#homeContainer {
 	width: $pageMobileWidth;
 	margin: 0 auto;
 	background-color: darken(#EB9409, 13%);
 	height: 1000px;
-	background-image: url('../img/lamptablet.jpg');;
-	@include mediaTablet {
-		width: $pageTabletWidth;
-	}
+	background-image: url('../img/lamptablet.jpg');
+	// @include mediaTablet {
+	// 	width: $pageTabletWidth;
+	// }
 }
 
-#homeContainer {
+#homeBannerContainer {
 	position: relative;
 	top: 80px;
 	height: 300px;
-	@include mediaTablet {
-		height: 490px;
-	}
+	// @include mediaTablet {
+	// 	height: 490px;
+	// }
 	background-color: rgba(190,190,190,0.5);
 	width: inherit;
 
 }
 
-.headerImage {
+.homeImage {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	width: inherit;
+	width: 100%;
 }
 
 .homeButton {
 	width: 150px;
 	height: 80px;
-	@include mediaTablet {
-		width: 200px;
-		height: 100px;
-	};
-	background-color:burlywood;
+	// @include mediaTablet {
+	// 	width: 200px;
+	// 	height: 100px;
+	// };
 	transition-duration: 0.5s;
 	font-family: $headerFont;
 	font-size: 1.2em;
@@ -45,7 +41,9 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 20px;
-	margin-top: 7px
+	margin-top: 7px;
+	border-radius:8px;
+	background-color: burlywood;
 
 }
 

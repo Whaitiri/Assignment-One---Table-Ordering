@@ -4,3 +4,46 @@ $pageFullWidth: 2024px;
 
 $headerFont: 'Lato', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
+
+$backgroundColor: #EB9409;
+
+.centerMe {
+	margin: 0 auto;
+	text-align: center;
+}
+
+body {
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+button {
+	border: 0;
+	font-size: 1em;	 
+	cursor: pointer;
+	transition-duration: 0.5s;
+	font-family: $headerFont;
+	outline:none;
+}
+
+button:active { //button press effect
+	transform: translateY(4px);
+}
+
+a {
+	color: black;
+}
+
+h1 {
+	font-family: $headerFont;
+}
+
+p {
+	font-family: $bodyFont;
+}
