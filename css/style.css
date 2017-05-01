@@ -6,11 +6,11 @@
 
 button {
   border: 0;
-  background: transparent;
-  font-family: inherit;
   font-size: 1em;
   cursor: pointer;
-  border-radius: 8px; }
+  border-radius: 8px;
+  transition-duration: 0.5s;
+  font-family: "Lato", sans-serif; }
 
 h1 {
   font-family: "Lato", sans-serif; }

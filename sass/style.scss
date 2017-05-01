@@ -9,13 +9,13 @@
 	text-decoration: none;
 }
 
-button{
-	  border      : 0;
-	  background  : transparent;
-	  font-family : inherit;
-	  font-size   : 1em;
-	  cursor      : pointer;
-	  border-radius: 8px;
+button {
+	border: 0;
+	font-size: 1em;	 
+	cursor: pointer;
+	border-radius: 8px;
+	transition-duration: 0.5s;
+	font-family: $headerFont;
 }
 
 h1 {
