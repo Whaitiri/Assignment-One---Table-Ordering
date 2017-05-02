@@ -16,6 +16,11 @@
 	}
 }
 
+@mixin centerMeMix {
+	margin: 0 auto;
+	text-align: center;
+}
+
 @mixin greenBorder {
 	border: green 1px solid;
 }

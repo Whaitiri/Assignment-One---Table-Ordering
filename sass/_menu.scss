@@ -1,0 +1,28 @@
+.menuCategoryContainer {
+	margin-top: 5px;
+}
+
+.menuItem {
+	width: 172px; //50% of container width, minus 3 + 3 for margin, minus 1 + 1 for border
+	margin: 3px;
+	padding-top: 5px; //bit of space between image and top border
+	float: left;
+	border: 1px solid darken(antiquewhite, 10%);
+	border-opacity: 0.1;
+}
+
+.menuItemImage {
+	width: 90%;
+}
+
+.menuItemHeader {
+	font-size: 1.1em;
+}
+
+.menuItemText {
+	font-size: 0.9em;
+	text-align: center;
+	@include centerMeMix;
+	width: 90%;
+}
+

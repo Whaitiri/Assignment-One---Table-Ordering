@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'index';
+@import 'menu';
 
 #masterContainer {
 	width: 100%;
@@ -9,17 +10,20 @@
 
 #headerContainer {
 	width: $pageMobileWidth;
-	background-color: darken($backgroundColor, 10%);
-	background: linear-gradient(to right, #D37154, lighten(#DD8D3F,5%));
-	height: 211px;
-	// background-image: url('../img/lamptablet.jpg');
+	background: $backgroundGradient;
+	height: 235px; //logo + nav buttons
 }
 
 #pageContainer {
 	width: $pageMobileWidth;
-    height: 500px;
-	background-color: lighten($backgroundColor, 10%);
-	background: linear-gradient(to right, #D37154, lighten(#DD8D3F,5%));
+    height: 1500px;
+    background: $backgroundGradient;
+}
+
+#whiteContainer { //maybe move to menu.scss
+	width: 90%;
+	background-color: antiquewhite;
+	height: 96%;
 }
 
 .headerImage {
@@ -28,7 +32,7 @@
 }
 
 #headerNav {
-	width: 100%;
+	width: 100%;	
 }
 
 #headerNav ul li {
@@ -41,10 +45,6 @@
 	text-align: center;
 	letter-spacing: 1px;
 	box-shadow: -1px 1px 1px lighten(black,10%);
-}
-
-.navButton:active {
-	box-shadow: 0px 0px 1px burlywood;	
 }
 
 .inactiveButton {
