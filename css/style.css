@@ -64,7 +64,7 @@ p {
   background-color: burlywood; }
 
 .homeButton:active {
-  box-shadow: 0px 0px 1px black; }
+  box-shadow: 0px 0px 1px burlywood; }
 
 .homeButton:hover {
   background-color: #fbd392; }
@@ -103,10 +103,10 @@ p {
   border-radius: 18px;
   text-align: center;
   letter-spacing: 1px;
-  box-shadow: -1px 1px 1px black; }
+  box-shadow: -1px 1px 1px #1a1a1a; }
 
 .navButton:active {
-  box-shadow: 0px 0px 1px black; }
+  box-shadow: 0px 0px 1px burlywood; }
 
 .inactiveButton {
   background-color: rgba(222, 184, 135, 0.2);
