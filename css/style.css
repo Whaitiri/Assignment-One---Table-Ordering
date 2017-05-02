@@ -15,12 +15,12 @@ button {
   border: 0;
   font-size: 1em;
   cursor: pointer;
-  transition-duration: 0.5s;
   font-family: "Lato", sans-serif;
-  outline: none; }
+  outline: none;
+  transition-duration: 0.1s; }
 
 button:active {
-  transform: translateY(4px); }
+  transform: translateY(2px); }
 
 a {
   color: black; }
@@ -53,7 +53,6 @@ p {
 .homeButton {
   width: 150px;
   height: 80px;
-  transition-duration: 0.5s;
   font-family: "Lato", sans-serif;
   font-size: 1.2em;
   box-shadow: -3px 3px 1px black;
@@ -63,6 +62,9 @@ p {
   margin-top: 7px;
   border-radius: 8px;
   background-color: burlywood; }
+
+.homeButton:active {
+  box-shadow: 0px 0px 1px black; }
 
 .homeButton:hover {
   background-color: #fbd392; }
@@ -77,14 +79,14 @@ p {
 #headerContainer {
   width: 400px;
   background-color: #ba7507;
-  background: linear-gradient(to right, #d37154, #e19a55);
+  background: linear-gradient(to right, #D37154, #e19a55);
   height: 211px; }
 
 #pageContainer {
   width: 400px;
   height: 500px;
   background-color: #f7aa30;
-  background: linear-gradient(to right, #d37154, #e19a55); }
+  background: linear-gradient(to right, #D37154, #e19a55); }
 
 .headerImage {
   margin-top: 20px;
