@@ -98,11 +98,15 @@ p {
 #headerNav ul li {
   display: inline; }
 
-#headerNav button {
+.navButton {
   height: 50px;
   border-radius: 18px;
   text-align: center;
-  letter-spacing: 2px; }
+  letter-spacing: 1px;
+  box-shadow: -1px 1px 1px black; }
+
+.navButton:active {
+  box-shadow: 0px 0px 1px black; }
 
 .inactiveButton {
   background-color: rgba(222, 184, 135, 0.2);
