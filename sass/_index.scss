@@ -11,6 +11,7 @@
 	top: 70px;
 	background-color: rgba(190,190,190,0.5);
 	width: inherit;
+	padding-bottom: 10px;
 }
 
 .homeImage {
@@ -20,12 +21,12 @@
 }
 
 .homeButton {
-	width: 150px;
+	width: 200px;
 	height: 80px;
 	font-family: $headerFont;
 	font-size: 1.2em;
 	box-shadow: -3px 3px 1px black;
-	margin: 7px 10px 20px;
+	margin: 7px 10px 10px;
 	border-radius:8px;
 	background-color: burlywood;
 }
