@@ -22,7 +22,7 @@
 .menuItemText {
 	font-size: 0.9em;
 	text-align: center;
-	@include centerMeMix;
+	@extend .centerMe;
 	width: 90%;
 }
 
