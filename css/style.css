@@ -1,0 +1,131 @@
+.centerMe, .menuItemText {
+  margin: 0 auto;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none; }
+
+button {
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  outline: none;
+  transition-duration: 0.1s; }
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 1px burlywood; }
+
+a {
+  color: black; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+#homeContainer {
+  width: 400px;
+  background: linear-gradient(to right, #D37154, #e19a55);
+  height: 1000px;
+  background-image: url("../img/lamptablet.jpg"); }
+
+#homeBannerContainer {
+  position: relative;
+  top: 80px;
+  height: 300px;
+  background-color: rgba(190, 190, 190, 0.5);
+  width: inherit; }
+
+.homeImage {
+  margin: 20px 0px;
+  width: 100%; }
+
+.homeButton {
+  width: 150px;
+  height: 80px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  box-shadow: -3px 3px 1px black;
+  margin: 7px 10px 20px;
+  border-radius: 8px;
+  background-color: burlywood; }
+
+.homeButton:active {
+  box-shadow: 0px 0px 1px burlywood; }
+
+#waiterPopup {
+  display: none; }
+
+.menuCategoryContainer {
+  margin-top: 5px; }
+
+.menuItem {
+  width: 172px;
+  margin: 3px;
+  padding-top: 3px;
+  float: left;
+  border: 1px solid #f4d4aa;
+  border-opacity: 0.1;
+  border-radius: 5px; }
+
+.menuItemImage {
+  width: 95%; }
+
+.menuItemHeader {
+  font-size: 1.1em; }
+
+.menuItemText {
+  font-size: 0.9em;
+  text-align: center;
+  width: 90%; }
+
+#masterContainer {
+  width: 100%;
+  height: 100%; }
+
+#headerContainer {
+  width: 400px;
+  background: linear-gradient(to right, #D37154, #e19a55);
+  height: 235px; }
+
+#pageContainer {
+  width: 400px;
+  height: 1500px;
+  background: linear-gradient(to right, #D37154, #e19a55); }
+
+#whiteContainer {
+  width: 90%;
+  background-color: antiquewhite;
+  height: 96%;
+  border-radius: 10px; }
+
+.headerImage {
+  margin-top: 20px;
+  width: 100%; }
+
+#headerNav {
+  width: 100%; }
+  #headerNav ul li {
+    display: inline; }
+
+.navButton {
+  height: 50px;
+  border-radius: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: -1px 1px 1px #1a1a1a; }
+
+.inactiveButton {
+  background-color: rgba(222, 184, 135, 0.2);
+  width: 35%;
+  border: 2px burlywood solid; }
+
+.activeButton {
+  background-color: burlywood;
+  width: 41%; }
