@@ -40,7 +40,8 @@ p {
   position: relative;
   top: 70px;
   background-color: rgba(190, 190, 190, 0.5);
-  width: inherit; }
+  width: inherit;
+  padding-bottom: 10px; }
 
 .homeImage {
   margin: 20px 0px;
@@ -48,12 +49,12 @@ p {
   max-width: 700px; }
 
 .homeButton {
-  width: 150px;
+  width: 200px;
   height: 80px;
   font-family: "Lato", sans-serif;
   font-size: 1.2em;
   box-shadow: -3px 3px 1px black;
-  margin: 7px 10px 20px;
+  margin: 7px 10px 10px;
   border-radius: 8px;
   background-color: burlywood; }
 
@@ -118,8 +119,6 @@ p {
 #headerNav {
   width: 100%;
   max-width: 700px; }
-  #headerNav ul li {
-    display: inline; }
 
 .navButton {
   height: 50px;
