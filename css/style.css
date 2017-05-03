@@ -107,7 +107,8 @@ p {
   width: 90%;
   background-color: antiquewhite;
   height: 96%;
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin-bottom: 20px; }
 
 .headerImage {
   margin-top: 20px;
