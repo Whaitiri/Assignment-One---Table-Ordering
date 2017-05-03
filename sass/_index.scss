@@ -1,5 +1,6 @@
 #homeContainer {
-	width: $pageMobileWidth;
+	width: device-width;
+	max-width: $pageMobileWidth;
 	background: $backgroundGradient;
 	height: 1000px;
 	background-image: url('../img/lamptablet.jpg');
