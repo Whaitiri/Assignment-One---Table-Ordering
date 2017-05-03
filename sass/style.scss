@@ -24,6 +24,7 @@
 	width: 90%;
 	background-color: antiquewhite;
 	height: 96%;
+	border-radius: 10px;
 }
 
 .headerImage {
@@ -32,11 +33,12 @@
 }
 
 #headerNav {
+	
 	width: 100%;	
-}
 
-#headerNav ul li {
-	display: inline;
+	ul li {
+		display: inline;
+	}
 }
 
 .navButton {
