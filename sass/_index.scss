@@ -1,21 +1,14 @@
 #homeContainer {
-	width: device-width;
-	max-width: $pageMobileWidth;
 	background: $backgroundGradient;
-	height: 1000px;
 	background-image: url('../img/lamptablet.jpg');
-	// @include mediaTablet {
-	// 	width: $pageTabletWidth;
-	// }
+	background-size: cover;
+	height: 1000px;
+	overflow: hidden;
 }
 
 #homeBannerContainer {
 	position: relative;
-	top: 80px;
-	height: 300px;
-	// @include mediaTablet {
-	// 	height: 490px;
-	// }
+	top: 70px;
 	background-color: rgba(190,190,190,0.5);
 	width: inherit;
 }
@@ -23,15 +16,12 @@
 .homeImage {
 	margin: 20px 0px;
 	width: 100%;
+	max-width: 700px;
 }
 
 .homeButton {
 	width: 150px;
 	height: 80px;
-	// @include mediaTablet {
-	// 	width: 200px;
-	// 	height: 100px;
-	// };
 	font-family: $headerFont;
 	font-size: 1.2em;
 	box-shadow: -3px 3px 1px black;

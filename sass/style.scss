@@ -4,29 +4,20 @@
 @import 'menu';
 
 #masterContainer {
-	width: 100%;
+	width: device-width;
 	height: 100%;
+	background: $backgroundGradient;
 }
 
 #headerContainer {
-	width: device-width;
-	max-width: $pageMobileWidth;
 	background: $backgroundGradient;
-	height: 235px; //logo + nav buttons
-	@include mediaTablet {
-		max-width: $pageTabletWidth;
-		height: 370px;
-	}
+	padding-bottom: 50px;
+	@extend .centerMe;
 }
 
 #pageContainer {
-	width: device-width;
-	max-width: $pageMobileWidth;
-	@include mediaTablet {
-		max-width: $pageTabletWidth;
-	}
-    height: 1500px;
     background: $backgroundGradient;
+    @extend .centerMe;
 }
 
 #whiteContainer { //maybe move to menu.scss
@@ -34,20 +25,22 @@
 	background-color: antiquewhite;
 	height: 96%;
 	border-radius: 10px;
+	@extend .centerMe;
 }
 
 .headerImage {
 	margin-top: 20px;
 	width: 100%;
+	max-width: 700px;
 }
 
-#headerNav {
-	
-	width: 100%;	
-
+#headerNav {	
+	width: 100%;
+	max-width: 700px;	
 	ul li {
 		display: inline;
 	}
+	@extend .centerMe;
 }
 
 .navButton {
