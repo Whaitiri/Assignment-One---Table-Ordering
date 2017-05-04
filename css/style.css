@@ -10,7 +10,7 @@
 
 button:active {
   transform: translateY(2px);
-  box-shadow: 0px 0px 1px burlywood; }
+  box-shadow: 0px 0px 0px burlywood; }
 
 a {
   color: black; }
@@ -28,7 +28,7 @@ p {
   font-family: "Open Sans", sans-serif; }
 
 #homeContainer {
-  background: linear-gradient(to right, #D37154, #e19a55);
+  background: linear-gradient(to left, #ff9c75, #DD8D3F);
   background-image: url("../img/lamptablet.jpg");
   background-size: cover;
   height: 1000px;
@@ -164,18 +164,18 @@ button {
 #masterContainer {
   width: device-width;
   height: 100%;
-  background: linear-gradient(to right, #D37154, #e19a55); }
+  background: linear-gradient(to left, #ff9c75, #DD8D3F); }
 
 #headerContainer {
-  background: linear-gradient(to right, #D37154, #e19a55);
+  background: linear-gradient(to left, #ff9c75, #DD8D3F);
   padding-bottom: 50px; }
 
 #pageContainer {
-  background: linear-gradient(to right, #D37154, #e19a55); }
+  background: linear-gradient(to left, #ff9c75, #DD8D3F); }
 
 #whiteContainer {
   width: 90%;
-  background-color: antiquewhite;
+  background: linear-gradient(to right, #dde, #EEE);
   height: 96%;
   border-radius: 10px;
   margin-bottom: 20px; }
@@ -194,12 +194,11 @@ button {
   border-radius: 18px;
   text-align: center;
   letter-spacing: 1px;
-  box-shadow: -1px 1px 1px #1a1a1a; }
+  box-shadow: -1px 1px 2px #1a1a1a; }
 
 .inactiveButton {
   background-color: rgba(222, 184, 135, 0.2);
-  width: 35%;
-  border: 1px burlywood solid; }
+  width: 35%; }
 
 .activeButton {
   background-color: burlywood;
@@ -234,4 +233,4 @@ button {
 
 .cartItemImage, .menuItemImage {
   border-radius: 8px;
-  box-shadow: -1px 1px 1px #222; }
+  box-shadow: -1px 1px 3px #222; }

@@ -35,7 +35,7 @@ button {
 
 #whiteContainer { //maybe move to menu.scss
 	width: 90%;
-	background-color: antiquewhite;
+	background: $foregroundGradient;
 	height: 96%;
 	border-radius: 10px;
 	@extend .centerMe;
@@ -59,13 +59,12 @@ button {
 	border-radius: 18px;
 	text-align: center;
 	letter-spacing: 1px;
-	box-shadow: -1px 1px 1px lighten(black,10%);
+	box-shadow: -1px 1px 2px lighten(black,10%);
 }
 
 .inactiveButton {
 	background-color: rgba(222, 184, 135, 0.2);
 	width: 35%;
-	border: 1px burlywood solid;
 }
 
 .activeButton {
@@ -110,5 +109,5 @@ button {
 
 .cartItemImage, .menuItemImage {
 	border-radius: 8px;
-	box-shadow: -1px 1px 1px #222;
+	box-shadow: -1px 1px 3px #222;
 }
