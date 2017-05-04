@@ -36,7 +36,7 @@ p {
   font-family: "Open Sans", sans-serif; }
 
 #homeContainer {
-  background: linear-gradient(to right, #d37154, #e19a55);
+  background: linear-gradient(to right, #D37154, #e19a55);
   background-image: url("../img/lamptablet.jpg");
   background-size: cover;
   height: 1000px;
@@ -161,14 +161,14 @@ p {
 #masterContainer {
   width: device-width;
   height: 100%;
-  background: linear-gradient(to right, #d37154, #e19a55); }
+  background: linear-gradient(to right, #D37154, #e19a55); }
 
 #headerContainer {
-  background: linear-gradient(to right, #d37154, #e19a55);
+  background: linear-gradient(to right, #D37154, #e19a55);
   padding-bottom: 50px; }
 
 #pageContainer {
-  background: linear-gradient(to right, #d37154, #e19a55); }
+  background: linear-gradient(to right, #D37154, #e19a55); }
 
 #whiteContainer {
   width: 90%;
@@ -212,7 +212,7 @@ p {
       width: 60%; } }
   @media (min-width: 1000px) {
     .cartContainer {
-      width: 45%; } }
+      width: 35%; } }
 
 .cartItem {
   width: 100%;
