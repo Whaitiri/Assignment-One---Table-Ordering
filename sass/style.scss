@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'index';
 @import 'menu';
+@import 'checkout';
 
 #masterContainer {
 	width: device-width;
@@ -52,7 +53,7 @@
 .inactiveButton {
 	background-color: rgba(222, 184, 135, 0.2);
 	width: 35%;
-	border: 2px burlywood solid;
+	border: 1px burlywood solid;
 }
 
 .activeButton {
@@ -60,3 +61,17 @@
 	width: 41%;
 }
 
+.goButton {
+	background-color: rgba(222, 184, 135, 1);
+}
+
+.cartContainer {
+}	
+
+.cartItem {
+	
+}
+
+.cartItemHeader {
+
+}

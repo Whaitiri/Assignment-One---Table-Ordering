@@ -1,125 +1,88 @@
-var cart = [];
-
 $(document).ready(function(){
-	
+	//variables
+	var brunchButton = $("#brunchButton");
+	var brunchContainer = $("#brunchContainer");
+	var sidesButton = $ ("#sidesButton");
+	var sidesContainer = $("#sidesContainer");
+	var drinksButton = $ ("#drinksButton");
+	var drinksContainer = $("#drinksContainer");
+	var addPopup = $("#addPopup");
 
-	//Check local Storage and if there is something called item then create the list
-	if (localStorage.getItem("items") === null) {
-		$("#Cart").append($("<li class='empty'>Your cart is empty</li>").html(item));
-	} else {
-		var storedItems = JSON.parse(localStorage.getItem("items"));
-		for(var i=0; i<storedItems.length;i++){
-			var item = storedItems[i];
-			$("#Cart").append("<li class='"+ item['product'] + "'>"+ item['product'] + " - " + item['quantity'] +"</li>");
-			cart.push(item);
+
+	brunchButton.click(function(){
+		brunchContainer.addClass("showContainer");
+		brunchButton.addClass("menuButtonActive");
+		if (sidesContainer.hasClass("showContainer")) {
+			sidesContainer.removeClass("showContainer")
+			sidesButton.removeClass("menuButtonActive")
 		}
-	}
-
-	CartCount();
-	//Adding new Items into your Cart
-	//It will check to see if there is already something in your cart.
-	//If there isn't then it will create a new entry
-	//If there is it will add the new quantity
-	$(".Add").click(function(){
-		var value = $(this).parent().find('p').text();
-		var quantity = 1;
-		var CartItemFound = false;
-
-		if(cart.length !== 0){
-			for(var i=0; i<cart.length; i++){
-				if(cart[i]['product'] === value){
-					CartItemFound = true;
-					break;
-				}
-			}
-		} 
-
-		if(CartItemFound === true){
-			//There is an exsisting entry in the array
-			for(var i=0; i<cart.length; i++){
-				if(cart[i]['product'] === value){
-					var OldQuant = Number(cart[i]['quantity']);
-					var NewQuant = parseInt(OldQuant) + quantity;
-					cart[i]['quantity'] = NewQuant;
-					$('li.' + value).text(value + " - " + NewQuant);
-					break;
-				}
-			};
-			localStorage.setItem("items", JSON.stringify(cart));
-		} else {
-			//There is a new entry in the array
-			cart.push({
-				"product" : value ,
-				"quantity" : quantity
-			});
-			localStorage.setItem("items", JSON.stringify(cart));
-			$(".empty").remove();
-			$("#Cart").append("<li class='"+ value + "'>"+ value + " - " + quantity +"</li>");			
+		else if (drinksContainer.hasClass("showContainer")) {
+			drinksContainer.removeClass("showContainer")
+			drinksButton.removeClass("menuButtonActive")
 		}
-		CartCount();
 	});
 
-	//When removing a item quantity from cart
-	$(".Remove").click(function(){
-		var value = $(this).parent().find('p').text();
-		var quantity = 1;
-		var CartItemFound = false;
-
-		//Check to see if there is an exsisting entry in localstorage
-		if(cart.length !== 0){
-			for(var i=0; i<cart.length; i++){
-				if(cart[i]['product'] === value){
-					CartItemFound = true;
-					break;
-				}
-			}
+	sidesButton.click(function(){
+		sidesContainer.addClass("showContainer");
+		sidesButton.addClass("menuButtonActive");
+		if (brunchContainer.hasClass("showContainer")) {
+			brunchContainer.removeClass("showContainer")
+			brunchButton.removeClass("menuButtonActive")
 		}
-
-		if(CartItemFound === true){
-			for(var i=0; i<cart.length; i++){
-				if(cart[i]['product'] === value){
-					var NewQuant = parseInt(cart[i]['quantity']) - quantity;
-					if(NewQuant > 0){
-						cart[i]['quantity'] = NewQuant;
-						$('li.' + value).text(value + " - " + NewQuant);
-					} else {
-						cart.splice(i, 1);
-						$('li.' + value).remove();
-					}
-				}
-			}
-			localStorage.setItem("items", JSON.stringify(cart));
+		else if (drinksContainer.hasClass("showContainer")) {
+			drinksContainer.removeClass("showContainer")
+			drinksButton.removeClass("menuButtonActive")
 		}
-		CartCount();
-	})	
-
-	//Empty your entire cart and your Local Storage
-	$('#Clear').click(function(){
-		localStorage.clear();
-		$("#Cart").empty();
-		cart = [];
-		$("#Cart").append($("<li class='empty'>Your cart is empty</li>"));
-		CartCount();
 	});
 
+	drinksButton.click(function(){
+		drinksContainer.addClass("showContainer");
+		drinksButton.addClass("menuButtonActive");
+		if (sidesContainer.hasClass("showContainer")) {
+			sidesContainer.removeClass("showContainer")
+			sidesButton.removeClass("menuButtonActive")
+		}
+		else if (brunchContainer.hasClass("showContainer")) {
+			brunchContainer.removeClass("showContainer")
+			brunchButton.removeClass("menuButtonActive")
+		}
+	});
 
+	//menu popups
+		$(".Add").click(function(){
+			addPopup.stop(true, false).animate({});
+			var value = $(this).parent().find('h3').text();
+			addPopup.html("<p>Added " + value + "to order!</p>");
+			addPopup.prependTo(this);
+			addPopup.show();
+			setTimeout(function() { addPopup.fadeOut(); }, 1000);
+		});
 
+		$(".Remove").click(function(){
+			addPopup.stop(true, false).animate({});
+			var value = $(this).parent().find('h3').text();
+			addPopup.html("<p>Removed " + value + "from order.</p>");
+			addPopup.prependTo(this);
+			addPopup.show();
+			setTimeout(function() { addPopup.fadeOut(); }, 1000);
+		});
 
-
+	//checkout popup
+		$(function() {
+	    //----- OPEN
+	    $('[data-popup-open]').on('click', function(e)  {
+	        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+	        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+	 
+	        e.preventDefault();
+	    });
+	 
+	    //----- CLOSE
+	    $('[data-popup-close]').on('click', function(e)  {
+	        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+	        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+	 
+	        e.preventDefault();
+	    });
+	});
 });
-
-function CartCount(){
-	$('.cartCount').empty();
-	var Count = 0;
-	var Quant;
-	if(cart != null){
-		for (var i = 0; i < cart.length; i++) {
-			Quant = parseInt(cart[i]['quantity']);
-			Count = Count += Quant;
-		};
-	} else {
-		Count = 0;
-	}
-	$('.cartCount').text(Count);
-
-}

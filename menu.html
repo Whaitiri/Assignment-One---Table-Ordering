@@ -16,129 +16,209 @@
 		<a href="index.html"><img class="headerImage" src="img/logo.png"></a>
 		<nav id="headerNav">
 			<a href="menu.html"><button class="activeButton navButton"><i class="fa fa-cutlery" aria-hidden="true"></i><br>Menu</button></a>
-			<a href="cart.html"><button class="inactiveButton navButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Cart</button></a>
+			<a href="cart.html"><button class="inactiveButton navButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Cart(<span class="cartCount"></span>)</button></a>
 		</nav>
 	</div>
 
 	<div id="pageContainer">
 		<div id="whiteContainer">
-			<h1>Breakfast</h1>
-			<div class="menuCategoryContainer">	
+			<button id="brunchButton" class="navButton menuButton menuButtonActive">Brunch</button>
+			<button id="sidesButton" class="navButton menuButton">Sides</button>
+			<button id="drinksButton" class="navButton menuButton">Drinks</button>
+			<div style="position: relative">
+				<div id="addPopup">
+				</div>
+			</div>
+			<div class="menuCategoryContainer showContainer" id="brunchContainer">
+			
+				<div class="menuItem centerMe">
+					<img src="img/poachedEgg.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Poached Eggs on Toast
+					</h3>
+					<p>$8.00</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					<p class="menuItemText ">
+					
+					</p>
+				</div>
+
+				<div class="menuItem centerMe">
+					<img src="img/beanToast.jpeg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Home-made Beans on Toast
+					</h3>		
+					<p>$8.00</p>		
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					<p class="menuItemText ">
+						
+					</p>
+				</div>
+
+				<div class="menuItem centerMe">
+					<img src="img/frenchToast.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						French Toast
+					</h3>
+					<p>$14.00</p>	
+					<p class="menuItemText ">
+						With Bacon & Banana
+					</p>	
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					
+				</div>
+
+
+				<div class="menuItem centerMe">
+					<img src="img/eggsBenedict.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Eggs Benedict
+					</h3>			
+					<p>$16.00</p>
+					<p class="menuItemText ">
+						Bacon or Spinach
+					</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					
+				</div>
+
+
+				<div class="menuItem centerMe">
+					<img src="img/bigBreakfast.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Cannery Breakfast
+					</h3>
+					<p>$18.00</p>
+					<p class="menuItemText ">
+						Bacon, Eggs, Kranski, Potato Rosti and Tomato on Toast
+					</p>			
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+
+				</div>
+
+			
+			</div>
+			
+
+			<div class="menuCategoryContainer" id="sidesContainer">	
 				
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<p class="menuItemHeader">
-						Lorem Ipsum Burger
-					</p>				
-					<button class="Add">++++</button>
-					<button class="Remove">----</button>	
-					<h6 class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
-					</h6>
+					<img src="img/fries.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Fries
+					</h3>
+					<p>$7.00</p>
+					<p class="menuItemText ">
+						With aioli
+					</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
 					
-
-				</div>
-	<p>Cart Count (<span class="cartCount"></span>)</p>
-	<ul id="Cart">
-	
-	</ul>
-				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<p class="menuItemHeader">
-						Ipsum Lorem Wrap
-					</p>				
-					<button class="Add">++++</button>
-					<button class="Remove">----</button>	
-					<h6 class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
-					</h6>
-
 				</div>
 
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
+					<img src="img/soup.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Soup of the Day
 					</h3>
+					<p>$8.00</p>
 					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
+						With toast
 					</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					
 				</div>
 
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
+					<img src="img/potato.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Baked Potato
 					</h3>
+					<p>$9.00</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
 					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
-					</p>
-				</div>
-
-				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
-					</h3>
-					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
+					
 					</p>
 				</div>
 
 			</div>
-			<h1>Lunch</h1>
-			<div class="menuCategoryContainer">	
+
+			<div class="menuCategoryContainer" id="drinksContainer">	
 				
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
+					<img src="img/coffee.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Coffee
 					</h3>
+					<p>$4.00</p>
 					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
+						Flat white, latte, cappucino, and more
+					</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					
+				</div>
+
+				<div class="menuItem centerMe">
+					<img src="img/tea.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Tea
+					</h3>
+					<p>$4.00</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
+					<p class="menuItemText ">
+					
 					</p>
 				</div>
 
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
+					<img src="img/coke.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Coca-Cola
 					</h3>
+					<p>$4.00</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
 					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
+					
 					</p>
 				</div>
 
 				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
+					<img src="img/orangeJuice.jpg" class="menuItemImage">
+					<h3 class="menuItemHeader product-title">
+						Juice
 					</h3>
+					<p>$5.00</p>
 					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
+						Freshly squeezed<br>
+						Orange, Apple, Carrot
 					</p>
-				</div>
-
-				<div class="menuItem centerMe">
-					<img src="img/placeholder.png" class="menuItemImage">
-					<h3 class="menuItemHeader">
-						Lorem Ipsum Burger
-					</h3>
-					<p class="menuItemText ">
-						A delicious burger used as a placeholder for more literal food.
-					</p>
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>	
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div id="footerContainer" class="centerMe">
-
+	tuterangi pleydell
 	</div>
+
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
 
 </body>
 </html>

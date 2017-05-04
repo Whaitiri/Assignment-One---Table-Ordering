@@ -1,7 +1,11 @@
 .menuCategoryContainer {
 	margin-top: 5px;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
+}
+
+.showContainer {
+	display: flex;
 }
 
 .menuItem { 
@@ -10,19 +14,25 @@
 	// border: 1px solid darken(antiquewhite, 10%);
 	border-opacity: 0.1;
 	border-radius: 5px;
+	margin-bottom: 5px;
 	@include mediaTablet {
 		flex: 0 1 33%;
+	}
+	@include mediaDesktop {
+		flex: 0 1 24%;
 	}
 }
 
 .menuItemImage {
 	width: 80%;
-	max-height: 200px;
-	max-width: 200px;
+	height: 150px;
+	width: 170px;
 }
 
 .menuItemHeader {
-	font-size: 1.1em;
+	font-size: 1em;
+	max-width: 200px;
+	@extend .centerMe;
 }
 
 .menuItemText {
@@ -33,3 +43,37 @@
 	max-width: 200px;
 }
 
+.menuButton {
+	width: 20%;
+	max-width: 140px;
+	margin: 5px 5px;
+	background-color: rgba(222, 184, 135, 0.2);
+}
+
+.menuButtonActive {
+	background-color: rgba(222, 184, 135, 1);
+	width: 35%;
+	max-width: 240px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.buttonAR {
+	margin: 5px;
+	background-color: transparent;
+	i {	
+		font-size: 2.5em;
+
+	}
+}
+
+#addPopup {
+	display: none;
+	position: absolute;
+	background-color: rgba(255,255,255,0.95);
+	z-index: 999;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+}

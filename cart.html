@@ -16,20 +16,41 @@
 		<a href="index.html"><img class="headerImage" src="img/logo.png"></a>
 		<nav id="headerNav">
 			<a href="menu.html"><button class="inactiveButton navButton"><i class="fa fa-cutlery" aria-hidden="true"></i><br>Menu</button></a>
-			<a href="cart.html"><button class="activeButton navButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Cart</button></a>
+			<a href="cart.html"><button class="activeButton navButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i><br>Cart(<span class="cartCount"></span>)</button></a>
 		</nav>
 	</div>
 
 	<div id="pageContainer">
 		<div id="whiteContainer">
-			<h3>Cart</h3>
-			(<span class="cartCount"></span>)</p>
-	<ul id="Cart">
+			
+			<h1>Cart</h1>
+			
+			<ul id="Cart">
 
-	</ul>
-		<button id="Clear">Clear Cart</button>
-		</div>
-		
+			</ul>
+			<hr><p>(static styles)</p>
+
+			<div class="cartContainer">
+				<div class="cartItem">
+					<img src="img/poachedEgg.jpg" class="menuItemImage">
+				</div>
+					<h3 class="cartItemHeader product-title">
+						Poached Eggs on Toast
+					</h3>
+					
+					
+					<p>$8.00</p>
+
+					<button class="Add buttonAR"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+					<button class="Remove buttonAR"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+
+			</div>
+
+			<button id="Clear" class="navButton menuButton">Clear Cart</button>
+			<a href="checkout.html">
+				<button class="navButton menuButton goButton">Checkout</button>
+			</a>
+			</div>
 	</div>
 
 	<div id="footerContainer" class="centerMe">
@@ -40,6 +61,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
 
 </body>
 </html>

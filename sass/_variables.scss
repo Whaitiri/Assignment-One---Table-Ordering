@@ -1,6 +1,6 @@
 $pageMobileWidth: 420px;
 $pageTabletWidth: 700px;
-$pageFullWidth: 2024px;
+$pageFullWidth: 1000px;
 
 $headerFont: 'Lato', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
@@ -41,8 +41,15 @@ a {
 	color: black;
 }
 
+li {
+	font-family: $bodyFont;
+}
 h1,h2,h3,h4,h5,h6 {
 	font-family: $headerFont;
+}
+
+h6 {
+	font-weight: normal;
 }
 
 p {

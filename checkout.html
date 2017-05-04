@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Preservatorium - Checkout</title>
-
+	<script src="https://use.fontawesome.com/8e7d0d1d5e.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -13,21 +13,43 @@
 
 <div id="masterContainer">
 	<div id="headerContainer">
-		<h1>welcome</h1>
+		<a href="index.html"><img class="headerImage" src="img/logo.png"></a>
 	</div>
 
 	<div id="pageContainer">
-		<p>hello</p>
+		<div id="whiteContainer">
+			
+			<h1>Checkout</h1>
+			
+			<ul id="Cart">
+
+			</ul>
+
+			
+		<a href="cart.html">
+			<button class="navButton menuButton">Go Back</button>
+		</a>
+		<a data-popup-open="popup-1" href="#">
+			<button class="navButton menuButton goButton">Pay at Counter</button>
+		</a>
+		<div class="checkoutContainer" data-popup="popup-1">
+			<div class="checkoutConfirmPopup">
+				<p>This button will finalize your order. Make sure everything is correct before you proceed.</p><br>
+				<a data-popup-close="popup-1" href="#"><button class="navButton menuButton checkoutDecline">Go Back</button></a>
+				<a href="completedpayment.html"><button class="navButton menuButton checkoutConfirm goButton">Proceed</button></a>
+			</div>
+		</div>
 	</div>
 
-	<div id="footerContainer">
-		<p>goodbye<
+	<div id="footerContainer" class="centerMe">
+		
 	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
 
 </body>
 </html>
