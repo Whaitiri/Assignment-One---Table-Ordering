@@ -5,8 +5,8 @@ $pageFullWidth: 1000px;
 $headerFont: 'Lato', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
 
-$backgroundGradient: linear-gradient(to left, darken(lightsalmon,1%), #DD8D3F);
-$foregroundGradient: linear-gradient(to right, #dde, #EEE);
+$backgroundGradient: linear-gradient(to left, #ECC252, darken(#ECC252, 5%));
+$foregroundGradient: linear-gradient(to right, #EEF, #FFE);
 
 .centerMe {
 	margin: 0 auto;

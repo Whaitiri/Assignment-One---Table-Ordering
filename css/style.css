@@ -28,7 +28,7 @@ p {
   font-family: "Open Sans", sans-serif; }
 
 #homeContainer {
-  background: linear-gradient(to left, #ff9c75, #DD8D3F);
+  background: linear-gradient(to left, #ecc252, #e9ba3b);
   background-image: url("../img/lamptablet.jpg");
   background-size: cover;
   height: 1000px;
@@ -54,7 +54,7 @@ p {
   box-shadow: -3px 3px 1px black;
   margin: 7px 10px 10px;
   border-radius: 8px;
-  background-color: burlywood; }
+  background-color: #ECC252; }
 
 .homeButton:active {
   box-shadow: 0px 0px 1px burlywood; }
@@ -102,11 +102,11 @@ p {
   width: 20%;
   max-width: 140px;
   margin: 5px 5px;
-  background-color: rgba(222, 184, 135, 0.2);
+  background-color: rgba(207, 158, 23, 0.8);
   overflow: hidden; }
 
 .menuButtonActive {
-  background-color: burlywood;
+  background-color: #cf9e17;
   width: 35%;
   max-width: 240px;
   font-size: 1.2em;
@@ -164,18 +164,18 @@ button {
 #masterContainer {
   width: device-width;
   height: 100%;
-  background: linear-gradient(to left, #ff9c75, #DD8D3F); }
+  background: linear-gradient(to left, #ecc252, #e9ba3b); }
 
 #headerContainer {
-  background: linear-gradient(to left, #ff9c75, #DD8D3F);
+  background: linear-gradient(to left, #ecc252, #e9ba3b);
   padding-bottom: 50px; }
 
 #pageContainer {
-  background: linear-gradient(to left, #ff9c75, #DD8D3F); }
+  background: linear-gradient(to left, #ecc252, #e9ba3b); }
 
 #whiteContainer {
   width: 90%;
-  background: linear-gradient(to right, #dde, #EEE);
+  background: linear-gradient(to right, #eeeeff, #ffffee);
   height: 96%;
   border-radius: 10px;
   margin-bottom: 20px; }
@@ -197,15 +197,15 @@ button {
   box-shadow: -1px 1px 2px #1a1a1a; }
 
 .inactiveButton {
-  background-color: rgba(222, 184, 135, 0.2);
+  background-color: rgba(207, 158, 23, 0.2);
   width: 35%; }
 
 .activeButton {
-  background-color: burlywood;
+  background-color: #cf9e17;
   width: 41%; }
 
 .goButton {
-  background-color: burlywood; }
+  background-color: #cf9e17; }
 
 .cartContainer {
   width: 80%; }
