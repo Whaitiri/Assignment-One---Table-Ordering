@@ -19,24 +19,67 @@
 	<div id="pageContainer">
 		<div id="whiteContainer">
 			
-			<h1>Checkout</h1>
+			<h1 style="margin-bottom: 10px;">Checkout</h1>
 			
 			<ul id="Cart">
 
 			</ul>
+						<hr><p>(static styles)</p>
 
+			<div class="cartContainer">
+				<div class="cartItem">
+					<img src="img/poachedEgg.jpg" class="cartItemImage">
+					<div class="cartText">
+						<h3 class="cartItemHeader product-title">Poached Eggs on Toast</h3>
+						<p>$8.00 x 2</p>
+						<p>Total: $16.00</p>
+					</div>
+				</div>
+
+				<div class="cartItem">
+					<img src="img/frenchToast.jpg" class="cartItemImage">
+					<h3 class="cartItemHeader product-title">French Toast</h3>
+					<p>$14.00 x 3</p>
+					<p>Total: $42.00</p>
+				</div>
+
+			</div>
 			
 		<a href="cart.html">
 			<button class="navButton menuButton">Go Back</button>
 		</a>
 		<a data-popup-open="popup-1" href="#">
-			<button class="navButton menuButton goButton">Pay at Counter</button>
+			<button class="navButton menuButton goButton">Pay</button>
 		</a>
 		<div class="checkoutContainer" data-popup="popup-1">
 			<div class="checkoutConfirmPopup">
 				<p>This button will finalize your order. Make sure everything is correct before you proceed.</p><br>
+
+			<ul id="Cart">
+
+			</ul>
+						<hr><p>(static styles)</p>
+
+			<div class="cartContainer">
+				<div class="cartItem">
+					<img src="img/poachedEgg.jpg" class="cartItemImage">
+					<div class="cartText">
+						<h3 class="cartItemHeader product-title">Poached Eggs on Toast</h3>
+						<p>$8.00 x 2</p>
+						<p>Total: $16.00</p>
+					</div>
+				</div>
+
+				<div class="cartItem">
+					<img src="img/frenchToast.jpg" class="cartItemImage">
+					<h3 class="cartItemHeader product-title">French Toast</h3>
+					<p>$14.00 x 3</p>
+					<p>Total: $42.00</p>
+				</div>
+
+			</div>
 				<a data-popup-close="popup-1" href="#"><button class="navButton menuButton checkoutDecline">Go Back</button></a>
-				<a href="completedpayment.html"><button class="navButton menuButton checkoutConfirm goButton">Proceed</button></a>
+				<a href="completedpayment.html"><button class="navButton menuButton checkoutConfirm goButton">Pay</button></a>
 			</div>
 		</div>
 	</div>

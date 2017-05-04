@@ -48,6 +48,7 @@
 	max-width: 140px;
 	margin: 5px 5px;
 	background-color: rgba(222, 184, 135, 0.2);
+	overflow: hidden;
 }
 
 .menuButtonActive {
@@ -74,6 +75,6 @@
 	background-color: rgba(255,255,255,0.95);
 	z-index: 999;
 	width: 100px;
-	padding: 10px;
+	padding: 7px;
 	text-align: center;
 }
