@@ -4,6 +4,18 @@
 @import 'menu';
 @import 'checkout';
 
+button {
+	border: 0;
+	font-size: 1em;	
+	@include mediaMobile {
+		font-size: 0.8em;
+	} 
+	cursor: pointer;
+	font-family: $headerFont;
+	outline:none;
+	transition-duration: 0.1s;
+}
+
 #masterContainer {
 	width: device-width;
 	height: 100%;
