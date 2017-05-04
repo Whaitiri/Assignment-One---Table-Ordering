@@ -8,14 +8,6 @@
   list-style-type: none;
   text-decoration: none; }
 
-button {
-  border: 0;
-  font-size: 1em;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  outline: none;
-  transition-duration: 0.1s; }
-
 button:active {
   transform: translateY(2px);
   box-shadow: 0px 0px 1px burlywood; }
@@ -36,7 +28,7 @@ p {
   font-family: "Open Sans", sans-serif; }
 
 #homeContainer {
-  background: linear-gradient(to right, #d37154, #e19a55);
+  background: linear-gradient(to right, #D37154, #e19a55);
   background-image: url("../img/lamptablet.jpg");
   background-size: cover;
   height: 1000px;
@@ -158,17 +150,28 @@ p {
   border-radius: 3px;
   background: #fff; }
 
+button {
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  outline: none;
+  transition-duration: 0.1s; }
+  @media (max-width: 420px) {
+    button {
+      font-size: 0.8em; } }
+
 #masterContainer {
   width: device-width;
   height: 100%;
-  background: linear-gradient(to right, #d37154, #e19a55); }
+  background: linear-gradient(to right, #D37154, #e19a55); }
 
 #headerContainer {
-  background: linear-gradient(to right, #d37154, #e19a55);
+  background: linear-gradient(to right, #D37154, #e19a55);
   padding-bottom: 50px; }
 
 #pageContainer {
-  background: linear-gradient(to right, #d37154, #e19a55); }
+  background: linear-gradient(to right, #D37154, #e19a55); }
 
 #whiteContainer {
   width: 90%;
@@ -212,7 +215,7 @@ p {
       width: 60%; } }
   @media (min-width: 1000px) {
     .cartContainer {
-      width: 45%; } }
+      width: 35%; } }
 
 .cartItem {
   width: 100%;
@@ -228,3 +231,7 @@ p {
 .cartItemHeader {
   margin-bottom: 10px;
   font-size: 1em; }
+
+.cartItemImage, .menuItemImage {
+  border-radius: 8px;
+  box-shadow: -1px 1px 1px #222; }
