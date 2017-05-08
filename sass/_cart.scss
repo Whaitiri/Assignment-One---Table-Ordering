@@ -1,0 +1,58 @@
+.cartContainer {
+	width: 80%;
+	@extend .centerMe;
+	@include mediaTablet {
+		width: 60%;
+	}
+	@include mediaDesktop {
+		width: 35%;
+	}
+}	
+
+.cartItem {
+	width: 100%;
+	height: 185px;
+
+}
+
+.cartItemImage {
+	float: left;
+	height: 100%;
+	max-height: 150px;
+	width: 50%;
+	max-width: 170px;
+
+}
+
+.cartItemHeader {
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+
+//completedpayment.html
+#progressBar {
+	width: 90%;
+	margin: 10px auto;
+	height: 22px;
+	background-color: white;
+}
+
+#progressBar div {
+	height: 100%;
+	text-align: right;
+	padding: 0 10px;
+	line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+	width: 0;
+	background-color: #ECC252;
+	box-sizing: border-box;
+}
+
+.surveyForm {
+    letter-spacing: 5px;
+    line-height: 70px;
+    font-family: $bodyFont;
+    input {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}

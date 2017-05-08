@@ -2,7 +2,7 @@
 @import 'mixins';
 @import 'index';
 @import 'menu';
-@import 'checkout';
+@import 'cart';
 
 button {
 	border: 0;
@@ -18,6 +18,13 @@ button {
 	outline:none;
 	transition-duration: 0.1s;
 }
+
+
+.cartItemImage, .menuItemImage {
+	border-radius: 8px;
+	box-shadow: -1px 1px 3px #222;
+}
+
 
 #masterContainer {
 	width: device-width;
@@ -79,46 +86,10 @@ button {
 	background-color: rgba(207, 158, 23, 1);
 }
 
-.cartContainer {
-	width: 80%;
-	@extend .centerMe;
-	@include mediaTablet {
-		width: 60%;
-	}
-	@include mediaDesktop {
-		width: 35%;
-	}
-}	
-
 .disableButton {
 	pointer-events: none;
-
 }
 
 .disableButton button {
 	background-color: grey;
-}
-.cartItem {
-	width: 100%;
-	height: 185px;
-
-}
-
-.cartItemImage {
-	float: left;
-	height: 100%;
-	max-height: 150px;
-	width: 50%;
-	max-width: 170px;
-
-}
-
-.cartItemHeader {
-	margin-bottom: 10px;
-	font-size: 1em;
-}
-
-.cartItemImage, .menuItemImage {
-	border-radius: 8px;
-	box-shadow: -1px 1px 3px #222;
 }

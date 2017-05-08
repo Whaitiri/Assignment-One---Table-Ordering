@@ -1,4 +1,4 @@
-.centerMe, .menuItemHeader, .menuItemText, #headerContainer, #pageContainer, #whiteContainer, #headerNav, .cartContainer {
+.centerMe, .menuItemHeader, .menuItemText, .cartContainer, #headerContainer, #pageContainer, #whiteContainer, #headerNav {
   margin: 0 auto;
   text-align: center; }
 
@@ -127,26 +127,29 @@ p {
   padding: 7px;
   text-align: center; }
 
-.checkoutContainer {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.75); }
+.cartContainer {
+  width: 80%; }
+  @media (min-width: 700px) and (max-width: 1000px) {
+    .cartContainer {
+      width: 60%; } }
+  @media (min-width: 1000px) {
+    .cartContainer {
+      width: 35%; } }
 
-.checkoutConfirmPopup {
+.cartItem {
   width: 100%;
-  padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 2px 6px black;
-  border-radius: 3px;
-  background: #fff; }
+  height: 185px; }
+
+.cartItemImage {
+  float: left;
+  height: 100%;
+  max-height: 150px;
+  width: 50%;
+  max-width: 170px; }
+
+.cartItemHeader {
+  margin-bottom: 10px;
+  font-size: 1em; }
 
 #progressBar {
   width: 90%;
@@ -185,6 +188,10 @@ button {
   @media (min-width: 1000px) {
     button {
       font-size: 1em; } }
+
+.cartItemImage, .menuItemImage {
+  border-radius: 8px;
+  box-shadow: -1px 1px 3px #222; }
 
 #masterContainer {
   width: device-width;
@@ -232,36 +239,8 @@ button {
 .goButton {
   background-color: #cf9e17; }
 
-.cartContainer {
-  width: 80%; }
-  @media (min-width: 700px) and (max-width: 1000px) {
-    .cartContainer {
-      width: 60%; } }
-  @media (min-width: 1000px) {
-    .cartContainer {
-      width: 35%; } }
-
 .disableButton {
   pointer-events: none; }
 
 .disableButton button {
   background-color: grey; }
-
-.cartItem {
-  width: 100%;
-  height: 185px; }
-
-.cartItemImage {
-  float: left;
-  height: 100%;
-  max-height: 150px;
-  width: 50%;
-  max-width: 170px; }
-
-.cartItemHeader {
-  margin-bottom: 10px;
-  font-size: 1em; }
-
-.cartItemImage, .menuItemImage {
-  border-radius: 8px;
-  box-shadow: -1px 1px 3px #222; }
