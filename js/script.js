@@ -67,7 +67,6 @@ $(document).ready(function(){
 			addPopup.stop(true, false).animate({});
 			var value = $(this).parent().find('h3').text();
 			addPopup.html("<p>Added " + value + "to order!</p>");
-			addPopup.prependTo(this);
 			addPopup.show();
 			setTimeout(function() { addPopup.fadeOut(); }, 1000);
 		});
@@ -76,27 +75,7 @@ $(document).ready(function(){
 			addPopup.stop(true, false).animate({});
 			var value = $(this).parent().find('h3').text();
 			addPopup.html("<p>Removed " + value + "from order.</p>");
-			addPopup.prependTo(this);
 			addPopup.show();
 			setTimeout(function() { addPopup.fadeOut(); }, 1000);
 		});
-
-	//checkout popup
-		$(function() {
-	    //----- OPEN
-	    $('[data-popup-open]').on('click', function(e)  {
-	        var targeted_popup_class = jQuery(this).attr('data-popup-open');
-	        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
-	 
-	        e.preventDefault();
-	    });
-	 
-	    //----- CLOSE
-	    $('[data-popup-close]').on('click', function(e)  {
-	        var targeted_popup_class = jQuery(this).attr('data-popup-close');
-	        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
-	 
-	        e.preventDefault();
-	    });
-	});
 });
