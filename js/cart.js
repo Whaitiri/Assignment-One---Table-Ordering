@@ -12,15 +12,14 @@ $(document).ready(function(){
 		for(var i=0; i<storedItems.length;i++){
 			var item = storedItems[i];
 			var ClassName = item['product'].replace(/\s/g, '');
-			// $("#Cart").append("<li class='"+ ClassName + "'>"+ item['product'] + " - " + item['quantity'] + " ($" +  item['price'] + ")</li>");
-			$(".cartContainer").append("<div class='cartItem'>"+
+			$(".cartContainer").append("<div class='cartItem "+ClassName+"'>"+
 								"<img src='img/"+ClassName+".jpg' alt='"+ClassName+"' class='cartItemImage'>"+
 									"<div class='cartText'>"+
-										"<h3 class='cartItemHeader product_title'>"+item['product']+"</h3>"+
-										"<p class='product_price'>$"+item['originalPrice']+" x "+item['quantity']+"</p>"+
-										"<button class='buttonAR'><i class='fa fa-plus-square' aria-hidden='true'></i></button>"+
-										"<button class='buttonAR'><i class='fa fa-minus-square' aria-hidden='true'></i></button>"+
-										"<p>Total: $"+item['price']+"</p>"+
+										"<h3 class='cartItemHeader product-title'>"+item['product']+"</h3>"+
+										"<p>$<span class='originalPrice'>"+item['originalPrice']+"</span> x <span class='product-quan'>"+item['quantity']+"</span></p>"+
+										"<button class='buttonAR Add'><i class='fa fa-plus-square' aria-hidden='true'></i></button>"+
+										"<button class='buttonAR Remove'><i class='fa fa-minus-square' aria-hidden='true'></i></button>"+
+										"<p>Total: $<span class='product_price'>"+item['price']+"</span></p>"+
 									"</div>"+
 								"</div>"
 								);
@@ -29,7 +28,7 @@ $(document).ready(function(){
 	}
 	CartCount();
 	PriceCount();
-console.log(cart);
+	console.log(cart);
 	//Empty your entire cart and your Local Storage
 	$('#Clear').click(function(){
 		localStorage.clear();
@@ -49,12 +48,19 @@ console.log(cart);
 //If there is it will add the new quantity
 $(document).on('click', '.Add', function(e) {
 	var value = $(this).parent().find('.product-title').text();
+	var ClassName = value.replace(/\s/g, '');
 	var price = parseFloat($(this).parent().find('.product_price').text()).toFixed(2);
-	var originalPrice = price;
+
+	if($("div." + ClassName).length) {
+		var originalPrice = parseFloat($(this).parent().find('.originalPrice').text()).toFixed(2);
+	} else {
+		var originalPrice = price;
+	}
 	var quantity = 1;
+
 	var CartItemFound = false;
 	var fullprice = parseFloat(price * quantity).toFixed(2);
-	console.log(fullprice);
+
 	if(cart.length !== 0){
 		for(var i=0; i<cart.length; i++){
 			if(cart[i]['product'] === value){
@@ -64,8 +70,6 @@ $(document).on('click', '.Add', function(e) {
 		}
 	}
 
-	var ClassName = value.replace(/\s/g, '');
-
 	if(CartItemFound === true){
 		//There is an exsisting entry in the array
 		for(var i=0; i<cart.length; i++){
@@ -73,11 +77,12 @@ $(document).on('click', '.Add', function(e) {
 				var OldQuant = Number(cart[i]['quantity']);
 				var OldPrice = parseFloat(cart[i]['price']).toFixed(2);
 				var NewQuant = parseInt(OldQuant) + quantity;
-				var NewPrice = Number(OldPrice) + Number(fullprice);
+				var NewPrice = Number(OldPrice) + Number(originalPrice);
 				var NewPrice = parseFloat(NewPrice).toFixed(2);
 				cart[i]['price'] = NewPrice;
 				cart[i]['quantity'] = NewQuant;
-				$('li.' + ClassName).text(value + " - " + NewQuant + " ($" + NewPrice + ")");
+				$('div.' + ClassName).find('.product-quan').text(NewQuant);
+				$('div.' + ClassName).find('.product_price').text(NewPrice);
 				break;
 			}
 		};
@@ -92,7 +97,17 @@ $(document).on('click', '.Add', function(e) {
 		});
 		localStorage.setItem("items", JSON.stringify(cart));
 		$(".empty").remove();
-		$("#Cart").append("<li class='"+ ClassName + "'>"+ value + " - " + quantity + " ($" + fullprice +   ")</li>");			
+		$(".cartContainer").append("<div class='cartItem "+ClassName+"'>"+
+					"<img src='img/"+ClassName+".jpg' alt='"+ClassName+"' class='cartItemImage'>"+
+						"<div class='cartText'>"+
+							"<h3 class='cartItemHeader product-title'>"+value+"</h3>"+
+							"<p>$<span class='originalPrice'>"+originalPrice+"</span> x <span class='product-quan'>"+quantity+"</span></p>"+
+							"<button class='buttonAR Add'><i class='fa fa-plus-square' aria-hidden='true'></i></button>"+
+							"<button class='buttonAR Remove'><i class='fa fa-minus-square' aria-hidden='true'></i></button>"+
+							"<p>Total: $<span class='product_price'>"+fullprice+"</span></p>"+
+						"</div>"+
+					"</div>"
+					);		
 	}
 	CartCount();
 	PriceCount();
@@ -100,9 +115,16 @@ $(document).on('click', '.Add', function(e) {
 
 //When removing a item quantity from cart
 $(document).on('click', '.Remove', function(e) {
-	var value = $(this).parent().find('.product-title').text();	
+	var value = $(this).parent().find('.product-title').text();
+	var ClassName = value.replace(/\s/g, '');
 	var price = parseFloat($(this).parent().find('.product_price').text()).toFixed(2);
+	if($("div." + ClassName).length) {
+		var originalPrice = parseFloat($(this).parent().find('.originalPrice').text()).toFixed(2);
+	} else {
+		var originalPrice = price;
+	}
 	var quantity = 1;
+
 	var CartItemFound = false;
 
 	//Check to see if there is an exsisting entry in localstorage
@@ -121,15 +143,16 @@ $(document).on('click', '.Remove', function(e) {
 				var NewQuant = parseInt(cart[i]['quantity']) - quantity;
 				var ClassName = cart[i]['product'].replace(/\s/g, '');
 				var OldPrice = parseFloat(cart[i]['price']).toFixed(2);
-				var NewPrice = Number(OldPrice) - Number(price);
+				var NewPrice = Number(OldPrice) - Number(originalPrice);
 				var NewPrice = parseFloat(NewPrice).toFixed(2);
 				if(NewQuant > 0){
 					cart[i]['quantity'] = NewQuant;
 					cart[i]['price'] = NewPrice;
-					$('li.' + ClassName).text(value + " - " + NewQuant + " ($" + NewPrice + ")");
+					$('div.' + ClassName).find('.product-quan').text(NewQuant);
+					$('div.' + ClassName).find('.product_price').text(NewPrice);
 				} else {
 					cart.splice(i, 1);
-					$('li.' + ClassName).remove();
+					$('div.' + ClassName).remove();
 				}
 			}
 		}
