@@ -4,6 +4,10 @@
 @import 'menu';
 @import 'cart';
 
+html {
+	background: $backgroundGradient;
+}
+
 button {
 	border: 0;
 	font-size: 0.8em;	

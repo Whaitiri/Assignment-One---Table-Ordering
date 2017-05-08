@@ -178,6 +178,9 @@ p {
     width: 1.5em;
     height: 1.5em; }
 
+html {
+  background: linear-gradient(to left, #ecc252, #e9ba3b); }
+
 button {
   border: 0;
   font-size: 0.8em;
