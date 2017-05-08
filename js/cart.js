@@ -14,7 +14,7 @@ $(document).ready(function(){
 			var ClassName = item['product'].replace(/\s/g, '');
 			// $("#Cart").append("<li class='"+ ClassName + "'>"+ item['product'] + " - " + item['quantity'] + " ($" +  item['price'] + ")</li>");
 			$(".cartContainer").append("<div class='cartItem'>"+
-								"<img src='img/"+ClassName+".jpg' class='cartItemImage'>"+
+								"<img src='img/"+ClassName+".jpg' alt='"+ClassName+"' class='cartItemImage'>"+
 									"<div class='cartText'>"+
 										"<h3 class='cartItemHeader product_title'>"+item['product']+"</h3>"+
 										"<p class='product_price'>$"+item['originalPrice']+" x "+item['quantity']+"</p>"+
