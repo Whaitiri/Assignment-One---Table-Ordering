@@ -6,10 +6,13 @@
 
 button {
 	border: 0;
-	font-size: 1em;	
-	@include mediaMobile {
-		font-size: 0.8em;
-	} 
+	font-size: 0.8em;	
+	@include mediaTablet {
+		font-size: 0.9em;
+	}
+	@include mediaDesktop {
+		font-size: 1em;
+	}
 	cursor: pointer;
 	font-family: $headerFont;
 	outline:none;
@@ -24,7 +27,7 @@ button {
 
 #headerContainer {
 	background: $backgroundGradient;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	@extend .centerMe;
 }
 
@@ -87,6 +90,14 @@ button {
 	}
 }	
 
+.disableButton {
+	pointer-events: none;
+
+}
+
+.disableButton button {
+	background-color: grey;
+}
 .cartItem {
 	width: 100%;
 	height: 185px;

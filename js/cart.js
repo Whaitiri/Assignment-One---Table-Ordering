@@ -4,8 +4,10 @@ $(document).ready(function(){
 
 	//Check local Storage and if there is something called item then create the list
 	if (localStorage.getItem("items") === null) {
-		$(".cartContainer").append($("<li class='empty'>Your cart is empty.</li>").html(item));
+		$(".cartContainer").append($("<p class='empty'>Your cart is empty.</p>").html(item));
+		$(".checkoutButton").addClass("disableButton");
 	} else {
+		$(".checkoutButton").removeClass("disableButton");
 		var storedItems = JSON.parse(localStorage.getItem("items"));
 		for(var i=0; i<storedItems.length;i++){
 			var item = storedItems[i];
@@ -33,9 +35,10 @@ console.log(cart);
 		localStorage.clear();
 		$(".cartContainer").empty();
 		cart = [];
-		// $("#Cart").append($("<li class='empty'>Your cart is empty</li>"));
+		$(".cartContainer").append($("<p class='empty'>Your cart is empty.</p>"));
 		CartCount();
 		PriceCount();
+		$(".checkoutButton").addClass("disableButton");
 	});
 
 });

@@ -109,7 +109,6 @@ p {
   background-color: #cf9e17;
   width: 35%;
   max-width: 240px;
-  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
@@ -138,7 +137,6 @@ p {
   background: rgba(0, 0, 0, 0.75); }
 
 .checkoutConfirmPopup {
-  max-width: 700px;
   width: 100%;
   padding: 40px;
   position: absolute;
@@ -150,16 +148,43 @@ p {
   border-radius: 3px;
   background: #fff; }
 
+#progressBar {
+  width: 90%;
+  margin: 10px auto;
+  height: 22px;
+  background-color: white; }
+
+#progressBar div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 22px;
+  /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #ECC252;
+  box-sizing: border-box; }
+
+.surveyForm {
+  letter-spacing: 5px;
+  line-height: 70px;
+  font-family: "Open Sans", sans-serif; }
+  .surveyForm input {
+    width: 1.5em;
+    height: 1.5em; }
+
 button {
   border: 0;
-  font-size: 1em;
+  font-size: 0.8em;
   cursor: pointer;
   font-family: "Lato", sans-serif;
   outline: none;
   transition-duration: 0.1s; }
-  @media (max-width: 420px) {
+  @media (min-width: 700px) and (max-width: 1000px) {
     button {
-      font-size: 0.8em; } }
+      font-size: 0.9em; } }
+  @media (min-width: 1000px) {
+    button {
+      font-size: 1em; } }
 
 #masterContainer {
   width: device-width;
@@ -168,7 +193,7 @@ button {
 
 #headerContainer {
   background: linear-gradient(to left, #ecc252, #e9ba3b);
-  padding-bottom: 50px; }
+  padding-bottom: 20px; }
 
 #pageContainer {
   background: linear-gradient(to left, #ecc252, #e9ba3b); }
@@ -215,6 +240,12 @@ button {
   @media (min-width: 1000px) {
     .cartContainer {
       width: 35%; } }
+
+.disableButton {
+  pointer-events: none; }
+
+.disableButton button {
+  background-color: grey; }
 
 .cartItem {
   width: 100%;
