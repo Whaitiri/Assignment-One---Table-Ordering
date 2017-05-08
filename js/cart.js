@@ -4,13 +4,24 @@ $(document).ready(function(){
 
 	//Check local Storage and if there is something called item then create the list
 	if (localStorage.getItem("items") === null) {
-		$("#Cart").append($("<li class='empty'>Your cart is empty</li>").html(item));
+		$(".cartContainer").append($("<li class='empty'>Your cart is empty.</li>").html(item));
 	} else {
 		var storedItems = JSON.parse(localStorage.getItem("items"));
 		for(var i=0; i<storedItems.length;i++){
 			var item = storedItems[i];
 			var ClassName = item['product'].replace(/\s/g, '');
-			$("#Cart").append("<li class='"+ ClassName + "'>"+ item['product'] + " - " + item['quantity'] + " ($" +  item['price'] + ")</li>");
+			// $("#Cart").append("<li class='"+ ClassName + "'>"+ item['product'] + " - " + item['quantity'] + " ($" +  item['price'] + ")</li>");
+			$(".cartContainer").append("<div class='cartItem'>"+
+								"<img src='img/"+ClassName+".jpg' class='cartItemImage'>"+
+									"<div class='cartText'>"+
+										"<h3 class='cartItemHeader product_title'>"+item['product']+"</h3>"+
+										"<p class='product_price'>$"+item['originalPrice']+" x "+item['quantity']+"</p>"+
+										"<button class='buttonAR'><i class='fa fa-plus-square' aria-hidden='true'></i></button>"+
+										"<button class='buttonAR'><i class='fa fa-minus-square' aria-hidden='true'></i></button>"+
+										"<p>Total: $"+item['price']+"</p>"+
+									"</div>"+
+								"</div>"
+								);
 			cart.push(item);
 		}
 	}
@@ -20,9 +31,9 @@ console.log(cart);
 	//Empty your entire cart and your Local Storage
 	$('#Clear').click(function(){
 		localStorage.clear();
-		$("#Cart").empty();
+		$(".cartContainer").empty();
 		cart = [];
-		$("#Cart").append($("<li class='empty'>Your cart is empty</li>"));
+		// $("#Cart").append($("<li class='empty'>Your cart is empty</li>"));
 		CartCount();
 		PriceCount();
 	});
@@ -34,8 +45,9 @@ console.log(cart);
 //If there isn't then it will create a new entry
 //If there is it will add the new quantity
 $(document).on('click', '.Add', function(e) {
-	var value = $(this).parent().find('.product_title').text();
+	var value = $(this).parent().find('.product-title').text();
 	var price = parseFloat($(this).parent().find('.product_price').text()).toFixed(2);
+	var originalPrice = price;
 	var quantity = 1;
 	var CartItemFound = false;
 	var fullprice = parseFloat(price * quantity).toFixed(2);
@@ -72,7 +84,8 @@ $(document).on('click', '.Add', function(e) {
 		cart.push({
 			"product" : value ,
 			"quantity" : quantity,
-			"price" : fullprice
+			"price" : fullprice,
+			"originalPrice" : originalPrice
 		});
 		localStorage.setItem("items", JSON.stringify(cart));
 		$(".empty").remove();
@@ -84,7 +97,7 @@ $(document).on('click', '.Add', function(e) {
 
 //When removing a item quantity from cart
 $(document).on('click', '.Remove', function(e) {
-	var value = $(this).parent().find('.product_title').text();	
+	var value = $(this).parent().find('.product-title').text();	
 	var price = parseFloat($(this).parent().find('.product_price').text()).toFixed(2);
 	var quantity = 1;
 	var CartItemFound = false;
