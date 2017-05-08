@@ -206,15 +206,13 @@ button {
   padding-bottom: 20px; }
 
 #pageContainer {
-  background: linear-gradient(to left, #ecc252, #e9ba3b);
-  height: 100%; }
+  background: linear-gradient(to left, #ecc252, #e9ba3b); }
 
 #whiteContainer {
   width: 90%;
   background: linear-gradient(to right, #eeeeff, #ffffee);
-  height: 96%;
   border-radius: 10px;
-  margin-bottom: 20px; }
+  padding-bottom: 20px; }
 
 .headerImage {
   margin-top: 20px;

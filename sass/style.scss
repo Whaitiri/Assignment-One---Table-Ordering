@@ -41,18 +41,14 @@ button {
 #pageContainer {
     background: $backgroundGradient;
     @extend .centerMe;
-    height: 100%;
 }
-
-
 
 #whiteContainer { //maybe move to menu.scss
 	width: 90%;
 	background: $foregroundGradient;
-	height: 96%;
 	border-radius: 10px;
 	@extend .centerMe;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 
 .headerImage {
