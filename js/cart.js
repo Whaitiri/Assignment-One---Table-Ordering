@@ -160,6 +160,17 @@ $(document).on('click', '.Remove', function(e) {
 	}
 	CartCount();
 	PriceCount();
+
+	if(cart.length == 0) {
+		localStorage.clear();
+		$(".cartContainer").empty();
+		cart = [];
+		$(".cartContainer").append($("<p class='empty'>Your cart is empty.</p>"));
+		CartCount();
+		PriceCount();
+		$(".checkoutButton").addClass("disableButton");
+	}
+	
 });
 
 function CartCount(){

@@ -64,17 +64,15 @@ $(document).ready(function(){
 
 	//menu popups
 		$(".Add").click(function(){
-			addPopup.stop(true, false).animate({});
 			var value = $(this).parent().find('h3').text();
-			addPopup.html("<p>Added " + value + "to order!</p>");
+			addPopup.html("<p>Added " + value + " to order!</p>");
 			addPopup.show();
 			setTimeout(function() { addPopup.fadeOut(); }, 1000);
 		});
 
 		$(".Remove").click(function(){
-			addPopup.stop(true, false).animate({});
 			var value = $(this).parent().find('h3').text();
-			addPopup.html("<p>Removed " + value + "from order.</p>");
+			addPopup.html("<p>Removed " + value + " from order.</p>");
 			addPopup.show();
 			setTimeout(function() { addPopup.fadeOut(); }, 1000);
 		});
